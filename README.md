@@ -2,7 +2,7 @@
 
 This repository contains Python bindings and sample applications for the [DeepStream SDK](https://developer.nvidia.com/deepstream-sdk).  
 
-SDK version supported: 5.0  
+SDK version supported: 5.1  
 
 Download the latest release package complete with bindings and sample applications from the [release section](../../releases).  
 
@@ -43,8 +43,15 @@ We currently provide the following sample applications:
 * [deepstream-test4](apps/deepstream-test4) -- msgbroker for sending analytics results to the cloud
 * [deepstream-imagedata-multistream](apps/deepstream-imagedata-multistream) -- multi-stream pipeline with access to image buffers
 * [deepstream-ssd-parser](apps/deepstream-ssd-parser) -- SSD model inference via Triton server with output parsing in Python
-* [deepstream-test1-usbcam](apps/deepstream-test1-usbcam) -- deepstream-test1 pipeline with USB camera input
+* [deepstream-test1-usbcam](apps/deepstream-test1-usbcam) -- deepstream-test1 pipelien with USB camera input
 * [deepstream-test1-rtsp-out](apps/deepstream-test1-rtsp-out) -- deepstream-test1 pipeline with RTSP output
+* [deepstream-opticalflow](apps/deepstream-opticalflow) -- optical flow and visualization pipeline with flow vectors returned in NumPy array
+* [deepstream-segmentation](apps/deepstream-segmentation) -- segmentation and visualization pipeline with segmentation mask returned in NumPy array  
+* [deepstream-nvdsanalytics](apps/deepstream-nvdsanalytics) -- multistream pipeline with analytics plugin  
+* [runtime_source_add_delete](apps/runtime_source_add_delete) -- add/delete source streams at runtime  
+
+Of these applications, the following have been updated or added in this release:
+* runtime_source_add_delete -- add/delete source streams at runtime  
 
 Detailed application information is provided in each application's subdirectory under [apps](apps).  
 

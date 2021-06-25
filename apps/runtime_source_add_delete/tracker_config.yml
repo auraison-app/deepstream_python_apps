@@ -1,6 +1,6 @@
 %YAML:1.0
 ################################################################################
-# Copyright (c) 2020, NVIDIA CORPORATION. All rights reserved.
+# Copyright (c) 2021, NVIDIA CORPORATION.  All rights reserved.
 #
 # Permission is hereby granted, free of charge, to any person obtaining a
 # copy of this software and associated documentation files (the "Software"),
@@ -56,13 +56,13 @@ NvDCF:
 
   # [Data Association] Matching method
   useGlobalMatching: 0   # If true, enable a global matching algorithm (i.e., Hungarian method). Otherwise, a greedy algorithm wll be used.
+  usePersistentThreads: 0 # If true, create data association threads once and re-use them
 
   # [Data Association] Thresholds in matching scores to be considered as a valid candidate for matching
   minMatchingScore4Overall: 0.0   # Min total score
   minMatchingScore4SizeSimilarity: 0.5    # Min bbox size similarity score
   minMatchingScore4Iou: 0.1       # Min IOU score
-  minMatchingScore4VisualSimilarity: 0.2    # Min visual similarity score
-  minTrackingConfidenceDuringInactive: 1.0  # Min tracking confidence during INACTIVE period. If tracking confidence is higher than this, then tracker will still output results until next detection 
+  minMatchingScore4VisualSimilarity: 0.2    # Min visual similarity score 
 
   # [Data Association] Weights for each matching score term
   matchingScoreWeight4VisualSimilarity: 0.8  # Weight for the visual similarity (in terms of correlation response ratio)
@@ -93,4 +93,3 @@ NvDCF:
   useInstanceAwareness: 0 # Use instance-awareness for multi-object tracking
   lambda_ia: 2            # Regularlization factor for each instance
   maxInstanceNum_ia: 4    # The number of nearby object instances to use for instance-awareness
-

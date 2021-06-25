@@ -1,5 +1,5 @@
 ################################################################################
-# Copyright (c) 2018-2020, NVIDIA CORPORATION. All rights reserved.
+# Copyright (c) 2021, NVIDIA CORPORATION.  All rights reserved.
 #
 # Permission is hereby granted, free of charge, to any person obtaining a
 # copy of this software and associated documentation files (the "Software"),
@@ -22,7 +22,7 @@
 
 # Mandatory properties for the tracker:
 #   tracker-width
-#   tracker-height: needs to be multiple of 6 for NvDCF
+#   tracker-height: needs to be multiple of 32 for NvDCF
 #   gpu-id
 #   ll-lib-file: path to low-level tracker lib
 #   ll-config-file: required for NvDCF, optional for KLT and IOU
@@ -34,5 +34,4 @@ gpu-id=0
 ll-lib-file=/opt/nvidia/deepstream/deepstream/lib/libnvds_mot_klt.so
 #ll-lib-file=/opt/nvidia/deepstream/deepstream/lib/libnvds_nvdcf.so
 ll-config-file=tracker_config.yml
-#enable-past-frame=1
 enable-batch-process=1
